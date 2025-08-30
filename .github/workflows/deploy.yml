@@ -53,7 +53,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
+          path: github-work
           ref: ${{ github.ref }}
+      - name: Copy files
+        run: |
+          cp gitea-work/VERSION.txt  github-work/
+          cp gitea-work/CHANGELOG.md github-work/
       - uses: EndBug/add-and-commit@v9
         with:
           add: 'LunaTV/VERSION.txt LunaTV/CHANGELOG.md'
