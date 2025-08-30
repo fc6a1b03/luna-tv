@@ -57,8 +57,8 @@ jobs:
           ref: ${{ github.ref }}
       - name: Copy files
         run: |
-          cp gitea-work/VERSION.txt  github-work/
-          cp gitea-work/CHANGELOG.md github-work/
+          cp LunaTV/VERSION.txt  github-work/
+          cp LunaTV/CHANGELOG.md github-work/
       - uses: EndBug/add-and-commit@v9
         with:
           add: 'LunaTV/VERSION.txt LunaTV/CHANGELOG.md'
