@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Checkout code from Gitea
         run: |
-          git clone https://${{ secrets.GITEA_USERNAME }}:${{ secrets.GITEA_PASSWORD }}@https://code.dbug.cloud/acme-assistant/LunaTV.git
+          git clone https://${{ secrets.GITEA_USERNAME }}:${{ secrets.GITEA_PASSWORD }}@code.dbug.cloud/acme-assistant/LunaTV.git
         env:
           GITEA_USERNAME: ${{ secrets.GITEA_USERNAME }}
           GITEA_PASSWORD: ${{ secrets.GITEA_PASSWORD }}
