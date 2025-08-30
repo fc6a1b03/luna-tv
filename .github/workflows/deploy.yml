@@ -56,7 +56,5 @@ jobs:
           ref: ${{ github.ref }}
       - uses: EndBug/add-and-commit@v9
         with:
-          add: |
-            LunaTV/VERSION.txt
-            LunaTV/CHANGELOG.md
+          add: 'LunaTV/VERSION.txt LunaTV/CHANGELOG.md'
           message: 'chore: sync CHANGELOG VERSION'
