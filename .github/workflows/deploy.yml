@@ -59,7 +59,6 @@ jobs:
         run: |
           cp gitea-work/CHANGELOG github-work/
           cp gitea-work/VERSION.txt github-work/
-          
       - name: add files
         uses: EndBug/add-and-commit@v9
         with:
