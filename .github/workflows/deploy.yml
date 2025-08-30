@@ -57,13 +57,14 @@ jobs:
           ref: ${{ github.ref }}
       - name: Copy files
         run: |
-          cp gitea-work/VERSION.txt  github-work/
-          cp gitea-work/CHANGELOG.md github-work/
+          cp gitea-work/CHANGELOG github-work/
+          cp gitea-work/VERSION.txt github-work/
+          
       - name: add files
         uses: EndBug/add-and-commit@v9
         with:
           cwd: github-work
           add: |
-            VERSION.txt
-            CHANGELOG.md
+            CHANGELOG
+            VERSION.txt           
           message: 'chore: sync CHANGELOG VERSION'
