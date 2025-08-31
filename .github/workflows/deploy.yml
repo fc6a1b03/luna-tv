@@ -17,8 +17,9 @@ jobs:
         env:
           GITEA_USERNAME: ${{ secrets.GITEA_USERNAME }}
           GITEA_PASSWORD: ${{ secrets.GITEA_PASSWORD }}
+          GITEA_REPOSITORY: ${{ secrets.GITEA_REPOSITORY }}
         run: |
-          git -c http.extraHeader="X-Skip-Geo: 1" clone --depth 1 --single-branch --branch main "https://${GITEA_USERNAME}:${GITEA_PASSWORD}@code.dbug.cloud/acme-assistant/LunaTV.git" gitea-work
+          git -c http.extraHeader="X-Skip-Geo: 1" clone --depth 1 --single-branch --branch main "https://${GITEA_USERNAME}:${GITEA_PASSWORD}@${GITEA_REPOSITORY}" gitea-work
         
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
