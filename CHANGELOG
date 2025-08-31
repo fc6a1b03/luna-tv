@@ -4,7 +4,6 @@
 
 - 禁用 原仓库跳转按钮
 - 禁用 iptv 服务器代理功能，仅支持通过 Allow CORS 插件 进行浏览器直连
-- 将 pnpm 替换为 bun 包管理工具，包括 Dockerfile 构建流程
 
 ### Fixed
 
